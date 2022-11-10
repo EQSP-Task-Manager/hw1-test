@@ -25,4 +25,4 @@ jobs:
 
       - name: HW1 test
         id: selftest
-        uses: EQSP-Task-Manager/hw1-draft@master
+        uses: EQSP-Task-Manager/hw1@master
