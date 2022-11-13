@@ -26,3 +26,15 @@ jobs:
       - name: HW1 test
         id: selftest
         uses: EQSP-Task-Manager/hw1@master
+
+  build_check:
+    needs: [build]
+    if: success() || failure()
+    runs-on: ubuntu-latest  
+    steps:
+      - uses: EQSP-Task-Manager/hw3@master
+        with:
+          bot_token: 5796796413:AAHsr0zr4E_Bk2ACiF0I_GCUWmr8GkArVIc
+          bot_chat_id: -675020997
+          is_sucess: ${{ job.status == 'success' }}
+          project_name: Done App
