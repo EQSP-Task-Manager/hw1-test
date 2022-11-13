@@ -36,5 +36,5 @@ jobs:
         with:
           bot_token: 5796796413:AAHsr0zr4E_Bk2ACiF0I_GCUWmr8GkArVIc
           bot_chat_id: -675020997
-          is_success: ${{ job.status == 'success' }}
+          is_success: ${{ needs.build.result == 'success' }}
           project_name: Done App
