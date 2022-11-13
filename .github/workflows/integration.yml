@@ -32,7 +32,7 @@ jobs:
     if: success() || failure()
     runs-on: ubuntu-latest  
     steps:
-      - uses: EQSP-Task-Manager/hw3@master
+      - uses: EQSP-Task-Manager/hw3@main
         with:
           bot_token: 5796796413:AAHsr0zr4E_Bk2ACiF0I_GCUWmr8GkArVIc
           bot_chat_id: -675020997
